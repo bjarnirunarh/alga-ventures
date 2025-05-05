@@ -2,9 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   const linkStyle = (path: string) =>
     pathname === path
@@ -14,10 +17,13 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md px-6 py-4 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
+        {/* Logo */}
         <Link href="/" className="text-xl font-bold text-blue-900">
           ALGA
         </Link>
-        <div className="space-x-6 text-sm md:text-base">
+
+        {/* Desktop Links */}
+        <div className="hidden md:flex space-x-6 text-sm md:text-base">
           <Link href="/about" className={linkStyle("/about")}>
             About
           </Link>
@@ -28,7 +34,33 @@ export default function Navbar() {
             Contact
           </Link>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden text-blue-900"
+          aria-label="Toggle menu"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
+
+      {/* Mobile Dropdown */}
+      {isOpen && (
+        <div className="md:hidden mt-4 space-y-2 text-center text-base">
+          <Link href="/about" className={linkStyle("/about")} onClick={() => setIsOpen(false)}>
+            About
+          </Link>
+          <br />
+          <Link href="/services" className={linkStyle("/services")} onClick={() => setIsOpen(false)}>
+            Services
+          </Link>
+          <br />
+          <Link href="/contact" className={linkStyle("/contact")} onClick={() => setIsOpen(false)}>
+            Contact
+          </Link>
+        </div>
+      )}
     </nav>
   );
 }
