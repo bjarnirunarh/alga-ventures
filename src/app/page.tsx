@@ -1,103 +1,68 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen bg-white text-gray-900">
+      {/* Hero Section */}
+      <section className="py-20 px-6 text-center bg-gradient-to-b from-blue-900 to-blue-700 text-white">
+        <h1 className="text-4xl md:text-6xl font-bold">Advisory. Development. Digital Ventures.</h1>
+        <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto">
+          Helping startups and companies launch digital products, grow revenue, and build scalable systems — from idea to execution.
+        </p>
+        <a href="/contact" className="mt-8 inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded-xl hover:bg-blue-100 transition">
+          Let’s Work Together
+        </a>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Intro Section */}
+      <section className="py-16 px-6 max-w-3xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-4">Your Strategic Partner for Digital Growth</h2>
+        <p className="text-lg">
+          ALGA Ventures is a founder-led advisory and development studio helping forward-thinking companies thrive in a digital-first world.
+          Whether you need strategy, an MVP, or scalable infrastructure — we help you move fast, with intention.
+        </p>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-12">What We Do</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white shadow p-6 rounded-xl">
+              <h3 className="text-xl font-semibold mb-2">Startup Advisory</h3>
+              <p className="text-gray-700">Launch smarter with product guidance, GTM strategy, and operational support.</p>
+            </div>
+            <div className="bg-white shadow p-6 rounded-xl">
+              <h3 className="text-xl font-semibold mb-2">Web & App Development</h3>
+              <p className="text-gray-700">Modern websites, apps, and MVPs using React, Next.js, and Shopify.</p>
+            </div>
+            <div className="bg-white shadow p-6 rounded-xl">
+              <h3 className="text-xl font-semibold mb-2">Passive Income Systems</h3>
+              <p className="text-gray-700">Monetization strategies and automation for digital product ecosystems.</p>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* Projects Section */}
+      <section className="py-16 px-6 max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-6">Projects</h2>
+        <p className="text-lg text-gray-700 mb-4">We build fast, flexible, and future-proof. Portfolio coming soon.</p>
+        <div className="mt-4">
+          <img src="/logo.png" alt="Alga logo" className="mx-auto w-32 opacity-20" />
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 px-6 bg-blue-50 text-center">
+        <h2 className="text-3xl font-bold mb-4">Let’s Talk</h2>
+        <p className="text-lg text-gray-700 mb-6">Taking on limited new projects in 2025. If you’re building something — let’s connect.</p>
+        <p className="font-semibold text-blue-800">📨 hi@alga.is</p>
+        <p className="mt-2"><a href="https://calendly.com/" className="underline text-blue-700 hover:text-blue-900">Book a Call</a></p>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-6 text-center text-sm text-gray-500">
+        © {new Date().getFullYear()} ALGA Ventures. All rights reserved.
       </footer>
-    </div>
+    </main>
   );
 }
