@@ -1,12 +1,12 @@
 import Navbar from "@/components/Navbar";
-import { motion } from "framer-motion";
+import { MotionSection } from "@/components/MotionDiv";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <Navbar />
       {/* Hero Section */}
-      <motion.section
+      <MotionSection
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -19,7 +19,7 @@ export default function Home() {
         <a href="/contact" className="mt-8 inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded-xl hover:bg-blue-100 transition">
           Let’s Work Together
         </a>
-      </motion.section>
+      </MotionSection>
 
       {/* Intro Section */}
       <section className="py-16 px-6 max-w-3xl mx-auto text-center">
