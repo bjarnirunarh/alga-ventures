@@ -18,8 +18,8 @@ export default function Navbar() {
     <nav className="bg-white shadow-md px-6 py-4 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold text-blue-900">
-          ALGA
+        <Link href="/">
+          <img src="/logo.png" alt="ALGA Logo" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Links */}

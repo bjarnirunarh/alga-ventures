@@ -1,11 +1,17 @@
 import Navbar from "@/components/Navbar";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <Navbar />
       {/* Hero Section */}
-      <section className="py-20 px-6 text-center bg-gradient-to-b from-blue-900 to-blue-700 text-white">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-6 text-center bg-gradient-to-b from-blue-900 to-blue-700 text-white"
+      >
         <h1 className="text-4xl md:text-6xl font-bold">Advisory. Development. Digital Ventures.</h1>
         <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto">
           Helping startups and companies launch digital products, grow revenue, and build scalable systems — from idea to execution.
@@ -13,7 +19,7 @@ export default function Home() {
         <a href="/contact" className="mt-8 inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded-xl hover:bg-blue-100 transition">
           Let’s Work Together
         </a>
-      </section>
+      </motion.section>
 
       {/* Intro Section */}
       <section className="py-16 px-6 max-w-3xl mx-auto text-center">
