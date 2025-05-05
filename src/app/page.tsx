@@ -1,6 +1,9 @@
+import Navbar from "@/components/Navbar";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
+      <Navbar />
       {/* Hero Section */}
       <section className="py-20 px-6 text-center bg-gradient-to-b from-blue-900 to-blue-700 text-white">
         <h1 className="text-4xl md:text-6xl font-bold">Advisory. Development. Digital Ventures.</h1>
