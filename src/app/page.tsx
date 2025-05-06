@@ -156,10 +156,10 @@ export default function Home() {
             Ready to build something together? Whether you need advisory, development, or a sounding board — We&apos;re here.
           </p>
           <a
-            href="mailto:hi@alga.is"
+            href="/contact"
             className="inline-block bg-[#1C5A7D] text-white px-6 py-3 rounded-xl hover:bg-[#174761] transition font-semibold"
           >
-            Contact Me
+            Contact Us
           </a>
         </div>
       </section>
