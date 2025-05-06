@@ -150,10 +150,10 @@ export default function Home() {
       <section className="py-24 px-6 bg-neutral-100">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            Let’s Work Together
+            Let&apos;s Work Together
           </h2>
           <p className="text-neutral-700 mb-8 text-lg">
-            Ready to build something together? Whether you need advisory, development, or a sounding board — We're here.
+            Ready to build something together? Whether you need advisory, development, or a sounding board — We&apos;re here.
           </p>
           <a
             href="mailto:hi@alga.is"
