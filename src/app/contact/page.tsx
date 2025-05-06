@@ -1,24 +1,73 @@
+"use client";
+
+import { MotionDiv } from "@/components/MotionDiv";
+
 export default function ContactPage() {
   return (
-    <div className="p-8 text-center">
-      <h1 className="text-3xl font-bold mb-4">Let’s Talk</h1>
-      <p className="text-lg">📨 Email us at <strong>hi@alga.is</strong></p>
-      <p className="mt-2"><a href="https://calendly.com/" className="text-blue-700 underline">Book a Call</a></p>
-      <p className="mt-4 text-gray-600">Taking on limited new projects in 2025. If you’re building something — let’s connect.</p>
-      <p className="mt-8 text-lg font-semibold">Or send us a message:</p>
-      <p className="text-sm text-gray-500">We’ll get back to you as soon as possible.</p>
-      <p className="text-sm text-gray-500">We respect your privacy. Your information will not be shared.</p>
-      <p className="text-sm text-gray-500">Powered by <a href="https://formsubmit.co/" className="text-blue-700 underline">FormSubmit</a></p>
-      
-      <form action="https://formsubmit.co/bjarni@alga.is" method="POST" className="space-y-4 max-w-md mx-auto">
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="text" name="name" required placeholder="Your Name" className="w-full border p-2 rounded" />
-        <input type="email" name="email" required placeholder="Your Email" className="w-full border p-2 rounded" />
-        <textarea name="message" required placeholder="Your Message" className="w-full border p-2 rounded h-32"></textarea>
-        <button type="submit" className="bg-blue-900 text-white px-6 py-2 rounded hover:bg-blue-800">
-          Send Message
-        </button>
-      </form>
-    </div>
+    <main className="max-w-2xl mx-auto px-6 py-16 text-center">
+      <MotionDiv
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h1 className="text-4xl font-bold text-primary mb-4">Let’s Talk</h1>
+        <p className="text-neutral-700 text-lg mb-2">
+          Interested in working together? Reach out and we’ll get back to you.
+        </p>
+        <p className="mb-2">
+          📩 <strong>hi@alga.is</strong>
+        </p>
+        <p className="mb-6">
+          📅 <a href="https://calendly.com/" className="text-primary underline">Book a Call</a>
+        </p>
+      </MotionDiv>
+
+      <MotionDiv
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        <p className="text-neutral-600 mb-1 text-sm">We’re currently accepting limited projects for 2025.</p>
+        <p className="text-sm text-neutral-500 mb-6">We respect your privacy. No spam. No data sharing.</p>
+
+        <form
+          action="https://formsubmit.co/bjarni@alga.is"
+          method="POST"
+          className="space-y-4 max-w-md mx-auto text-left"
+        >
+          <input type="hidden" name="_captcha" value="false" />
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="Your Name"
+            className="w-full border border-neutral-300 p-3 rounded-lg"
+          />
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Your Email"
+            className="w-full border border-neutral-300 p-3 rounded-lg"
+          />
+          <textarea
+            name="message"
+            required
+            placeholder="Your Message"
+            className="w-full border border-neutral-300 p-3 rounded-lg h-32"
+          />
+          <button
+            type="submit"
+            className="w-full bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/80 transition font-semibold"
+          >
+            Send Message
+          </button>
+        </form>
+
+        <p className="text-xs text-neutral-400 mt-4">
+          Powered by <a href="https://formsubmit.co" className="underline">FormSubmit</a>
+        </p>
+      </MotionDiv>
+    </main>
   );
 }
