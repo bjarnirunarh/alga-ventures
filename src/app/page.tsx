@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import { MotionDiv } from "@/components/MotionDiv";
+import Wave from "@/components/Wave";
 
 export default function Home() {
   return (
@@ -7,18 +8,7 @@ export default function Home() {
       <Hero />
 
       {/* Wavy Divider */}
-      <div className="-mt-1">
-        <svg
-          viewBox="0 0 1440 100"
-          className="w-full h-[100px]"
-          preserveAspectRatio="none"
-        >
-          <path
-            fill="#F3F4F6"
-            d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z"
-          />
-        </svg>
-      </div>
+      <Wave fill="#F3F4F6" />
 
       {/* What We Do */}
       <section className="py-20 px-6 bg-neutral-100">
@@ -64,18 +54,7 @@ export default function Home() {
       </section>
 
       {/* Wavy Divider */}
-      <div className="-mt-1">
-        <svg
-          viewBox="0 0 1440 100"
-          className="w-full h-[100px]"
-          preserveAspectRatio="none"
-        >
-          <path
-            fill="#F2F8FB"
-            d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z"
-          />
-        </svg>
-      </div>
+      <Wave fill="#F2F8FB" />
 
       {/* Recent Projects */}
       <section className="py-20 px-6 bg-[#F2F8FB]">
@@ -133,18 +112,7 @@ export default function Home() {
       </section>
       
       {/* Wavy Divider */}
-      <div className="-mt-1">
-        <svg
-          viewBox="0 0 1440 100"
-          className="w-full h-[100px]"
-          preserveAspectRatio="none"
-        >
-          <path
-            fill="#F3F4F6"
-            d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z"
-          />
-        </svg>
-      </div>
+      <Wave fill="#F3F4F6" />
 
       {/* Contact / Let's Talk Section */}
       <section className="py-24 px-6 bg-neutral-100">

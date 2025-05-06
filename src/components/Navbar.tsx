@@ -27,6 +27,7 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-6 text-sm md:text-base font-medium">
           <Link href="/about" className={linkClass("/about")}>About</Link>
           <Link href="/services" className={linkClass("/services")}>Services</Link>
+          <Link href="/projects" className={linkClass("/projects")}>Projects</Link>
           <Link href="/contact" className={linkClass("/contact")}>Contact</Link>
         </div>
 
@@ -45,6 +46,7 @@ export default function Navbar() {
         <div className="md:hidden px-4 pb-4 space-y-2 text-base font-medium text-center">
           <Link href="/about" onClick={() => setIsOpen(false)} className={linkClass("/about")}>About</Link>
           <Link href="/services" onClick={() => setIsOpen(false)} className={linkClass("/services")}>Services</Link>
+          <Link href="/projects" onClick={() => setIsOpen(false)} className={linkClass("/projects")}>Projects</Link>
           <Link href="/contact" onClick={() => setIsOpen(false)} className={linkClass("/contact")}>Contact</Link>
         </div>
       )}

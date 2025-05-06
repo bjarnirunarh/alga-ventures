@@ -9,7 +9,7 @@ export default function PrivacyPage() {
           We do not share your information with third parties, and we do not use cookies for tracking or advertising. If you contact us, we will only use your email for the purpose of responding.
         </p>
         <p className="text-neutral-700">
-          This policy may be updated without notice. For questions, contact us at <a href="mailto:hi@alga.is" className="text-primary underline">hi@alga.is</a>.
+          This policy may be updated without notice. For questions, contact us at <a href="mailto:hello@alga.is" className="text-primary underline">hello@alga.is</a>.
         </p>
       </main>
     );

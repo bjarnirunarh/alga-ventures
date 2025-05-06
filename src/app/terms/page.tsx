@@ -9,7 +9,7 @@ export default function TermsPage() {
           We make no guarantees about the accuracy of the content, and we reserve the right to modify or remove any material without notice.
         </p>
         <p className="text-neutral-700">
-          Questions? Contact us at <a href="mailto:hi@alga.is" className="text-primary underline">hi@alga.is</a>.
+          Questions? Contact us at <a href="mailto:hello@alga.is" className="text-primary underline">hello@alga.is</a>.
         </p>
       </main>
     );

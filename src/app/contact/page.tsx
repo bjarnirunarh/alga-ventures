@@ -15,7 +15,7 @@ export default function ContactPage() {
           Interested in working together? Reach out and we’ll get back to you.
         </p>
         <p className="mb-2">
-          📩 <strong>hi@alga.is</strong>
+          📩 <strong>hello@alga.is</strong>
         </p>
         <p className="mb-6">
           📅 <a href="https://calendly.com/" className="text-primary underline">Book a Call</a>
