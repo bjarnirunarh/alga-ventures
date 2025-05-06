@@ -1,77 +1,168 @@
-import Navbar from "@/components/Navbar";
-import { MotionSection } from "@/components/MotionDiv";
+import Hero from "@/components/Hero";
+import { MotionDiv } from "@/components/MotionDiv";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-gray-900">
-      <Navbar />
-      {/* Hero Section */}
-      <MotionSection
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="py-20 px-6 text-center bg-gradient-to-b from-blue-900 to-blue-700 text-white"
-      >
-        <h1 className="text-4xl md:text-6xl font-bold">Advisory. Development. Digital Ventures.</h1>
-        <p className="mt-6 text-lg md:text-xl max-w-2xl mx-auto">
-          Helping startups and companies launch digital products, grow revenue, and build scalable systems — from idea to execution.
-        </p>
-        <a href="/contact" className="mt-8 inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded-xl hover:bg-blue-100 transition">
-          Let’s Work Together
-        </a>
-      </MotionSection>
+    <main className="min-h-screen bg-white text-neutral-900 font-sans">
+      <Hero />
 
-      {/* Intro Section */}
-      <section className="py-16 px-6 max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-4">Your Strategic Partner for Digital Growth</h2>
-        <p className="text-lg">
-          ALGA Ventures is a founder-led advisory and development studio helping forward-thinking companies thrive in a digital-first world.
-          Whether you need strategy, an MVP, or scalable infrastructure — we help you move fast, with intention.
-        </p>
-      </section>
+      {/* Wavy Divider */}
+      <div className="-mt-1">
+        <svg
+          viewBox="0 0 1440 100"
+          className="w-full h-[100px]"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#F3F4F6"
+            d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z"
+          />
+        </svg>
+      </div>
 
-      {/* Services Section */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12">What We Do</h2>
+      {/* What We Do */}
+      <section className="py-20 px-6 bg-neutral-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12">
+            What We Do
+          </h2>
+
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white shadow p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-2">Startup Advisory</h3>
-              <p className="text-gray-700">Launch smarter with product guidance, GTM strategy, and operational support.</p>
-            </div>
-            <div className="bg-white shadow p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-2">Web & App Development</h3>
-              <p className="text-gray-700">Modern websites, apps, and MVPs using React, Next.js, and Shopify.</p>
-            </div>
-            <div className="bg-white shadow p-6 rounded-xl">
-              <h3 className="text-xl font-semibold mb-2">Passive Income Systems</h3>
-              <p className="text-gray-700">Monetization strategies and automation for digital product ecosystems.</p>
-            </div>
+            {[
+              {
+                title: "Product Advisory & Leadership",
+                description:
+                  "Guiding early-stage and scaling teams with product strategy, roadmap execution, and technical decision-making.",
+              },
+              {
+                title: "Custom App & Platform Development",
+                description:
+                  "Hands-on development of data tools, traceability systems, auctions, dashboards, and MVPs using React and Next.js.",
+              },
+              {
+                title: "Digital Growth & Monetization",
+                description:
+                  "Helping founders and teams create sustainable income through digital product ecosystems and automation.",
+              },
+            ].map((service, index) => (
+              <MotionDiv
+                key={service.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="bg-white rounded-xl shadow-md p-6"
+              >
+                <h3 className="text-xl font-semibold text-primary mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-neutral-700">{service.description}</p>
+              </MotionDiv>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section className="py-16 px-6 max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-6">Projects</h2>
-        <p className="text-lg text-gray-700 mb-4">We build fast, flexible, and future-proof. Portfolio coming soon.</p>
-        <div className="mt-4">
-          <img src="/logo.png" alt="Alga logo" className="mx-auto w-32 opacity-20" />
+      {/* Wavy Divider */}
+      <div className="-mt-1">
+        <svg
+          viewBox="0 0 1440 100"
+          className="w-full h-[100px]"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#F2F8FB"
+            d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z"
+          />
+        </svg>
+      </div>
+
+      {/* Recent Projects */}
+      <section className="py-20 px-6 bg-[#F2F8FB]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+            Recent Projects
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Catch Logbook App",
+                summary:
+                  "Digital reporting tool for fisheries compliance and efficiency.",
+                role: "Product Manager / Developer",
+              },
+              {
+                title: "Seafood Auction System",
+                summary:
+                  "Real-time bidding platform for wholesale seafood sales.",
+                role: "Product Advisor / Backend Lead",
+              },
+              {
+                title: "Traceability Platform",
+                summary:
+                  "Blockchain-backed system to track seafood from sea to plate.",
+                role: "Product Owner",
+              },
+              {
+                title: "Seafood Analytics Portal",
+                summary:
+                  "Data dashboards for pricing, supply, and performance analytics.",
+                role: "UX Designer / Frontend Dev",
+              },
+            ].map((project, index) => (
+              <MotionDiv
+                key={project.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition"
+              >
+                <h3 className="text-xl font-semibold text-primary mb-2">
+                  {project.title}
+                </h3>
+                <p className="text-neutral-700 mb-2">{project.summary}</p>
+                <p className="text-sm text-neutral-500 italic">
+                  Role: {project.role}
+                </p>
+              </MotionDiv>
+            ))}
+          </div>
         </div>
       </section>
+      
+      {/* Wavy Divider */}
+      <div className="-mt-1">
+        <svg
+          viewBox="0 0 1440 100"
+          className="w-full h-[100px]"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#F3F4F6"
+            d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z"
+          />
+        </svg>
+      </div>
 
-      {/* Contact Section */}
-      <section className="py-16 px-6 bg-blue-50 text-center">
-        <h2 className="text-3xl font-bold mb-4">Let’s Talk</h2>
-        <p className="text-lg text-gray-700 mb-6">Taking on limited new projects in 2025. If you’re building something — let’s connect.</p>
-        <p className="font-semibold text-blue-800">📨 hi@alga.is</p>
-        <p className="mt-2"><a href="https://calendly.com/" className="underline text-blue-700 hover:text-blue-900">Book a Call</a></p>
+      {/* Contact / Let's Talk Section */}
+      <section className="py-24 px-6 bg-neutral-100">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+            Let’s Work Together
+          </h2>
+          <p className="text-neutral-700 mb-8 text-lg">
+            Ready to build something together? Whether you need advisory, development, or a sounding board — We're here.
+          </p>
+          <a
+            href="mailto:hi@alga.is"
+            className="inline-block bg-[#1C5A7D] text-white px-6 py-3 rounded-xl hover:bg-[#174761] transition font-semibold"
+          >
+            Contact Me
+          </a>
+        </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-6 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} ALGA Ventures. All rights reserved.
-      </footer>
     </main>
   );
 }

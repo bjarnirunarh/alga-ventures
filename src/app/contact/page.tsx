@@ -9,6 +9,7 @@ export default function ContactPage() {
       <p className="text-sm text-gray-500">We’ll get back to you as soon as possible.</p>
       <p className="text-sm text-gray-500">We respect your privacy. Your information will not be shared.</p>
       <p className="text-sm text-gray-500">Powered by <a href="https://formsubmit.co/" className="text-blue-700 underline">FormSubmit</a></p>
+      
       <form action="https://formsubmit.co/bjarni@alga.is" method="POST" className="space-y-4 max-w-md mx-auto">
         <input type="hidden" name="_captcha" value="false" />
         <input type="text" name="name" required placeholder="Your Name" className="w-full border p-2 rounded" />
