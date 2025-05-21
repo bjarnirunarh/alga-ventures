@@ -5,7 +5,7 @@ export default function AuctionProjectPage() {
         <p className="text-neutral-700 mb-4">
           A real-time bidding platform for wholesale seafood sales, built for both sellers and verified buyers.
         </p>
-        <p className="text-sm text-neutral-500 italic mb-6">Role: Product Advisor / Backend Lead</p>
+        <p className="text-sm text-neutral-500 italic mb-6">Role: Product Manager / Team-lead</p>
         <img
           src="/projects/auction.jpg"
           alt="Auction Screenshot"

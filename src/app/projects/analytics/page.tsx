@@ -5,7 +5,7 @@ export default function AnalyticsProjectPage() {
         <p className="text-neutral-700 mb-4">
           Interactive dashboards to visualize seafood pricing trends, supply flows, and distributor performance.
         </p>
-        <p className="text-sm text-neutral-500 italic mb-6">Role: UX Designer / Frontend Dev</p>
+        <p className="text-sm text-neutral-500 italic mb-6">Role: UX Designer / Full-stack Dev</p>
         <img
           src="/projects/analytics.jpg"
           alt="Analytics Screenshot"

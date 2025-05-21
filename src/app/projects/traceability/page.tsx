@@ -5,7 +5,7 @@ export default function TraceabilityProjectPage() {
         <p className="text-neutral-700 mb-4">
           Blockchain-backed traceability for seafood — from sea to plate — increasing transparency across the supply chain.
         </p>
-        <p className="text-sm text-neutral-500 italic mb-6">Role: Product Owner</p>
+        <p className="text-sm text-neutral-500 italic mb-6">Role: Product Owner / Developer</p>
         <img
           src="/projects/traceability.jpg"
           alt="Traceability Screenshot"

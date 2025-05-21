@@ -6,7 +6,7 @@ export default function LogbookProjectPage() {
           A digital reporting tool for fisheries to comply with government regulations and improve operational efficiency.
         </p>
         <p className="text-sm text-neutral-500 mb-6 italic">
-          Role: Product Manager / Developer
+          Role: Product Owner / Team-lead
         </p>
         <img
           src="/projects/logbook.jpg"

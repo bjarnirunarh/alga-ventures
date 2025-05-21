@@ -69,13 +69,13 @@ export default function Home() {
                 title: "Catch Logbook App",
                 summary:
                   "Digital reporting tool for fisheries compliance and efficiency.",
-                role: "Product Manager / Developer",
+                role: "Product Manager / Product Owner",
               },
               {
                 title: "Seafood Auction System",
                 summary:
                   "Real-time bidding platform for wholesale seafood sales.",
-                role: "Product Advisor / Backend Lead",
+                role: "Product Manager / Team Lead",
               },
               {
                 title: "Traceability Platform",
@@ -87,7 +87,7 @@ export default function Home() {
                 title: "Seafood Analytics Portal",
                 summary:
                   "Data dashboards for pricing, supply, and performance analytics.",
-                role: "UX Designer / Frontend Dev",
+                role: "UX Designer / Full-stack Dev",
               },
             ].map((project, index) => (
               <MotionDiv

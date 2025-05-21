@@ -9,7 +9,7 @@ const projects = [
     title: "Catch Logbook App",
     summary:
       "A digital reporting tool for fisheries to comply with government regulations and improve operational efficiency.",
-    role: "Product Manager / Developer",
+    role: "Product Manager / Product Owner",
     image: "/projects/logbook.jpg",
     link: "/projects/logbook",
     tags: ["Seafood", "Compliance", "Reporting"],
@@ -18,7 +18,7 @@ const projects = [
     title: "Seafood Auction System",
     summary:
       "Real-time bidding platform for wholesale seafood sales, built for both sellers and verified buyers.",
-    role: "Product Advisor / Backend Lead",
+    role: "Product Manager / Team Lead",
     image: "/projects/auction.jpg",
     link: "/projects/auction",
     tags: ["Marketplace", "Bidding", "Logistics"],
@@ -36,7 +36,7 @@ const projects = [
     title: "Seafood Analytics Portal",
     summary:
       "Internal dashboards to visualize pricing trends, supply chains, and distributor performance data.",
-    role: "UX Designer / Frontend Dev",
+    role: "UX Designer / Full-stack Dev",
     image: "/projects/analytics.jpg",
     link: "/projects/analytics",
     tags: ["Analytics", "Dashboards", "Data"],
