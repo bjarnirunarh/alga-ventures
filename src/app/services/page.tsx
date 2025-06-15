@@ -1,79 +1,224 @@
 "use client";
 
-import { MotionDiv } from "@/components/MotionDiv";
-import {
-  Compass,
-  Code,
-  DollarSign,
-} from "lucide-react"; // import icons
+import Container from "@/components/shared/Container";
+import Button from "@/components/shared/Button";
+import Link from "next/link";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
-export default function ServicesPage() {
-  const services = [
-    {
-      title: "Product Advisory & Leadership",
-      icon: <Compass className="w-8 h-8 text-primary mb-4 mx-auto" />,
-      description:
-        "We help founders and product teams define, validate, and deliver impactful digital products. From early-stage ideation to scaling roadmaps, we guide you through product strategy, decision-making, and execution.",
-    },
-    {
-      title: "Custom App & Platform Development",
-      icon: <Code className="w-8 h-8 text-primary mb-4 mx-auto" />,
-      description:
-        "We design and build web platforms, internal tools, dashboards, and marketplaces using React, Next.js, and modern frameworks. Ideal for MVPs, seafood systems, or growing digital services.",
-    },
-    {
-      title: "Digital Growth & Monetization",
-      icon: <DollarSign className="w-8 h-8 text-primary mb-4 mx-auto" />,
-      description:
-        "We create systems for passive income, digital products, and repeatable sales. Whether it’s automation, analytics, or audience engagement — we help you turn ideas into sustainable revenue.",
-    },
-  ];
-
+export default function Services() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-16">
-      <MotionDiv
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-center mb-12"
-      >
-        <h1 className="text-4xl font-bold text-primary mb-4">Our Services</h1>
-        <p className="text-neutral-700 text-lg">
-          We bring your ideas to life through strategy, code, and care — helping founders, teams, and organizations build smarter.
-        </p>
-      </MotionDiv>
+    <main className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-b from-white to-gray-50 py-20 md:py-32">
+        <Container>
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Our Services
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              We offer a comprehensive suite of technology solutions tailored to the seafood industry.
+            </p>
+          </div>
+        </Container>
+      </section>
 
-      <div className="grid md:grid-cols-3 gap-8">
-        {services.map((service, index) => (
-          <MotionDiv
-            key={service.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="bg-neutral-50 rounded-xl shadow-md p-6 text-center"
-          >
-            {service.icon}
-            <h3 className="text-xl font-semibold text-primary mb-3">{service.title}</h3>
-            <p className="text-neutral-700 text-sm">{service.description}</p>
-          </MotionDiv>
-        ))}
-      </div>
+      {/* Services Grid */}
+      <section className="py-20 md:py-32 bg-blue-50">
+        <Container>
+          <div className="max-w-4xl mx-auto space-y-20">
+            {/* AI Integration */}
+            <div id="ai" className="scroll-mt-20">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">AI Integration</h2>
+                  <p className="text-gray-600 mb-6">
+                    Leverage the power of artificial intelligence to optimize your operations and make data-driven decisions.
+                  </p>
+                  <ul className="space-y-4 mb-8">
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Quality control automation using computer vision</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Predictive maintenance for processing equipment</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Inventory optimization and demand forecasting</span>
+                    </li>
+                  </ul>
+                  <Button as={Link} href="/schedule" size="lg">
+                    Get Started
+                  </Button>
+                </div>
+                <div className="bg-gray-100 rounded-lg p-6 md:p-8">
+                  <h3 className="text-xl font-semibold mb-4">Key Benefits</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Reduced operational costs</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Improved product quality</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Enhanced decision-making</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-      <MotionDiv
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
-        viewport={{ once: true }}
-        className="text-center mt-16"
-      >
-        <a
-          href="/contact"
-          className="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/80 transition font-semibold"
-        >
-          Let’s Talk About Your Project
-        </a>
-      </MotionDiv>
+            {/* Process Automation */}
+            <div id="automation" className="scroll-mt-20">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="order-2 md:order-1 bg-gray-100 rounded-lg p-6 md:p-8">
+                  <h3 className="text-xl font-semibold mb-4">Key Benefits</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Increased productivity</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Reduced manual errors</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Improved consistency</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="order-1 md:order-2">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Process Automation</h2>
+                  <p className="text-gray-600 mb-6">
+                    Streamline your operations with automated workflows and robotic process automation.
+                  </p>
+                  <ul className="space-y-4 mb-8">
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Automated data entry and processing</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Workflow automation and optimization</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Integration with existing systems</span>
+                    </li>
+                  </ul>
+                  <Button as={Link} href="/schedule" size="lg">
+                    Get Started
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Data Analytics */}
+            <div id="analytics" className="scroll-mt-20">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Data Analytics</h2>
+                  <p className="text-gray-600 mb-6">
+                    Transform your data into actionable insights with our advanced analytics solutions.
+                  </p>
+                  <ul className="space-y-4 mb-8">
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Real-time performance monitoring</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Custom dashboards and reporting</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Predictive analytics and forecasting</span>
+                    </li>
+                  </ul>
+                  <Button as={Link} href="/schedule" size="lg">
+                    Get Started
+                  </Button>
+                </div>
+                <div className="bg-gray-100 rounded-lg p-6 md:p-8">
+                  <h3 className="text-xl font-semibold mb-4">Key Benefits</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Better business insights</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Improved resource allocation</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Data-driven decision making</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Custom Software */}
+            <div id="software" className="scroll-mt-20">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="order-2 md:order-1 bg-gray-100 rounded-lg p-6 md:p-8">
+                  <h3 className="text-xl font-semibold mb-4">Key Benefits</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Tailored to your needs</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Scalable solutions</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Ongoing support and maintenance</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="order-1 md:order-2">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Custom Software</h2>
+                  <p className="text-gray-600 mb-6">
+                    Develop tailored software solutions that address your specific business challenges.
+                  </p>
+                  <ul className="space-y-4 mb-8">
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Custom web and mobile applications</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Enterprise resource planning systems</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Supply chain management solutions</span>
+                    </li>
+                  </ul>
+                  <Button as={Link} href="/schedule" size="lg">
+                    Get Started
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Card */}
+            <div className="bg-white p-8 md:p-10 rounded-lg shadow-lg flex flex-col items-center justify-center mt-4">
+              <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Ready to Transform Your Business?</h3>
+              <p className="mb-6 text-center text-gray-700 max-w-xl">Let&apos;s discuss how we can help you leverage technology to improve your operations.</p>
+              <Button as={Link} href="/schedule" variant="primary" size="lg" className="w-full sm:w-auto">Schedule a Free Consultation</Button>
+            </div>
+          </div>
+        </Container>
+      </section>
     </main>
   );
 }

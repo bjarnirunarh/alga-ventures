@@ -8,13 +8,13 @@ export default function Hero() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
-      className="text-center px-6 py-24 bg-[#E8F1F6]" // <<< light teal!
+      className="text-center px-6 py-24 bg-[#E8F1F6]" // light teal
     >
       <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6">
-        Advisory. Development. Digital Ventures.
+        Seafood Tech. Digital Products. AI Advisory.
       </h1>
       <p className="text-lg md:text-xl text-neutral-700 mb-10 max-w-2xl mx-auto">
-        Helping startups and companies launch digital products, grow revenue, and build scalable systems — from idea to execution.
+        We help seafood companies modernize with AI, automation, and digital tools — while also building bold, human-centered products across wellness, education, and tech.
       </p>
       <a
         href="/contact"

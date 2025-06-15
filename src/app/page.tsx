@@ -1,136 +1,102 @@
-import Hero from "@/components/Hero";
-import { MotionDiv } from "@/components/MotionDiv";
-import Wave from "@/components/Wave";
+import Container from "@/components/shared/Container";
+import Button from "@/components/shared/Button";
+import Link from "next/link";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import FeaturedProjects from "@/components/sections/FeaturedProjects";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-neutral-900 font-sans">
-      <Hero />
-
-      {/* Wavy Divider */}
-      <Wave fill="#F3F4F6" />
-
-      {/* What We Do */}
-      <section className="py-20 px-6 bg-neutral-100">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-12">
-            What We Do
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Product Advisory & Leadership",
-                description:
-                  "Guiding early-stage and scaling teams with product strategy, roadmap execution, and technical decision-making.",
-              },
-              {
-                title: "Custom App & Platform Development",
-                description:
-                  "Hands-on development of data tools, traceability systems, auctions, dashboards, and MVPs using React and Next.js.",
-              },
-              {
-                title: "Digital Growth & Monetization",
-                description:
-                  "Helping founders and teams create sustainable income through digital product ecosystems and automation.",
-              },
-            ].map((service, index) => (
-              <MotionDiv
-                key={service.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white rounded-xl shadow-md p-6"
-              >
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-neutral-700">{service.description}</p>
-              </MotionDiv>
-            ))}
+    <main className="min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-b from-white to-gray-50 py-20 md:py-32">
+        <Container>
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Transforming Seafood with Technology
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              We help seafood companies leverage AI, automation, and data tools to reduce costs and improve operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button as={Link} href="/schedule" size="lg">
+                Book a Call
+              </Button>
+              <Button as={Link} href="/services" variant="outline" size="lg">
+                Our Services
+              </Button>
+            </div>
           </div>
-        </div>
+        </Container>
       </section>
 
-      {/* Wavy Divider */}
-      <Wave fill="#F2F8FB" />
-
-      {/* Recent Projects */}
-      <section className="py-20 px-6 bg-[#F2F8FB]">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
-            Recent Projects
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "Catch Logbook App",
-                summary:
-                  "Digital reporting tool for fisheries compliance and efficiency.",
-                role: "Product Manager / Product Owner",
-              },
-              {
-                title: "Seafood Auction System",
-                summary:
-                  "Real-time bidding platform for wholesale seafood sales.",
-                role: "Product Manager / Team Lead",
-              },
-              {
-                title: "Traceability Platform",
-                summary:
-                  "Blockchain-backed system to track seafood from sea to plate.",
-                role: "Product Owner",
-              },
-              {
-                title: "Seafood Analytics Portal",
-                summary:
-                  "Data dashboards for pricing, supply, and performance analytics.",
-                role: "UX Designer / Full-stack Dev",
-              },
-            ].map((project, index) => (
-              <MotionDiv
-                key={project.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition"
-              >
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-neutral-700 mb-2">{project.summary}</p>
-                <p className="text-sm text-neutral-500 italic">
-                  Role: {project.role}
+      {/* Services Section */}
+      <section className="py-12 md:py-16 bg-blue-50">
+        <Container>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+              How We Help
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-4">AI Integration</h3>
+                <p className="text-gray-600 mb-4">
+                  Implement AI solutions to optimize processing, quality control, and inventory management.
                 </p>
-              </MotionDiv>
-            ))}
+                <Link href="/services#ai" className="text-primary hover:text-primary-dark inline-flex items-center">
+                  Learn more
+                  <ArrowRightIcon className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+              <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-4">Process Automation</h3>
+                <p className="text-gray-600 mb-4">
+                  Automate repetitive tasks and streamline operations to increase efficiency and reduce costs.
+                </p>
+                <Link href="/services#automation" className="text-primary hover:text-primary-dark inline-flex items-center">
+                  Learn more
+                  <ArrowRightIcon className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+              <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-4">Data Analytics</h3>
+                <p className="text-gray-600 mb-4">
+                  Transform raw data into actionable insights to make better business decisions.
+                </p>
+                <Link href="/services#analytics" className="text-primary hover:text-primary-dark inline-flex items-center">
+                  Learn more
+                  <ArrowRightIcon className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+              <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-4">Custom Software</h3>
+                <p className="text-gray-600 mb-4">
+                  Develop tailored software solutions to address your specific business needs.
+                </p>
+                <Link href="/services#software" className="text-primary hover:text-primary-dark inline-flex items-center">
+                  Learn more
+                  <ArrowRightIcon className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
+        </Container>
       </section>
-      
-      {/* Wavy Divider */}
-      <Wave fill="#F3F4F6" />
 
-      {/* Contact / Let's Talk Section */}
-      <section className="py-24 px-6 bg-neutral-100">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-            Let&apos;s Work Together
-          </h2>
-          <p className="text-neutral-700 mb-8 text-lg">
-            Ready to build something together? Whether you need advisory, development, or a sounding board — We&apos;re here.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block bg-[#1C5A7D] text-white px-6 py-3 rounded-xl hover:bg-[#174761] transition font-semibold"
-          >
-            Contact Us
-          </a>
-        </div>
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
+        <Container>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-8 md:p-10 rounded-lg shadow-lg flex flex-col items-center justify-center">
+              <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">Ready to Transform Your Business?</h3>
+              <p className="mb-6 text-center text-gray-700 max-w-xl">Let&apos;s discuss how we can help you leverage technology to improve your operations.</p>
+              <Button as={Link} href="/schedule" variant="primary" size="lg" className="w-full sm:w-auto">Schedule a Free Consultation</Button>
+            </div>
+          </div>
+        </Container>
       </section>
+
+      {/* Featured Projects Section */}
+      <FeaturedProjects limit={4} />
     </main>
   );
 }

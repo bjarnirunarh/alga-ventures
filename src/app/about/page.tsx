@@ -14,15 +14,15 @@ export default function AboutPage() {
         <h1 className="text-4xl font-bold text-primary mb-6">About ALGA Ventures</h1>
 
         <p className="text-neutral-700 mb-6 text-lg">
-          ALGA Ventures is a boutique innovation and product studio founded by Bjarni Heimisson and Solveig Hakonardottir, an Icelandic husband-and-wife team with deep roots in hard work, teaching, and technology.
+          ALGA Ventures is a boutique product and innovation studio founded by Icelandic husband-and-wife team Bjarni Heimisson and Solveig Hakonardottir. We specialize in seafood tech — but we’re not just one thing.
         </p>
 
         <p className="text-neutral-700 mb-4">
-          Born in a seafood village in Iceland, Bjarni brings firsthand knowledge of the industry combined with years of experience in product leadership, software development, and digital strategy. Solveig brings creativity, care, and structure — with a background in education, early childhood development, and web design.
+          Bjarni was born in a fishing village and brings deep roots in the seafood industry together with modern expertise in AI, product leadership, automation, and software development. Solveig’s background in education, team leadership, and design brings care, clarity, and structure to every project we touch.
         </p>
 
         <p className="text-neutral-700 mb-4">
-          Together, we help forward-thinking teams build platforms, marketplaces, analytics tools, and more — all with clarity, speed, and purpose.
+          Together, we help seafood companies modernize and grow using AI and automation — while also taking on high-impact projects in wellness, education, and tech. From launching apps to leading teams, we bring Icelandic values and Silicon Valley execution.
         </p>
       </MotionDiv>
 
@@ -44,7 +44,7 @@ export default function AboutPage() {
           />
           <h3 className="text-xl font-semibold text-primary mb-1">Bjarni Heimisson</h3>
           <p className="text-sm text-neutral-700">
-            Product leader, full-stack developer, and entrepreneur focused on seafood, tech, and automation.
+            Seafood-native product builder, AI integrator, and entrepreneur — focused on making operations smarter and margins stronger.
           </p>
         </MotionDiv>
 
@@ -64,7 +64,7 @@ export default function AboutPage() {
           />
           <h3 className="text-xl font-semibold text-primary mb-1">Solveig Hakonardottir</h3>
           <p className="text-sm text-neutral-700">
-            Team leader, front-end developer, educator and creative partner bringing structure, warmth, and design to every project and process.
+            Design-forward leader with a background in education, early childhood systems, and digital product development. Calm, kind, and deeply capable.
           </p>
         </MotionDiv>
       </div>
@@ -77,7 +77,7 @@ export default function AboutPage() {
         className="text-center mt-12"
       >
         <p className="text-neutral-700 mb-4">
-          We work with teams across industries, but always with the values we grew up with in Iceland — honesty, simplicity, and hard work.
+          We work with ambitious teams across seafood, wellness, education, and early-stage tech — always grounded in Icelandic values: honesty, simplicity, and hard work.
         </p>
         <a
           href="/contact"
