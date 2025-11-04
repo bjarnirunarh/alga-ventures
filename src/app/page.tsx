@@ -81,6 +81,16 @@ export default function Home() {
                   <ArrowRightIcon className="w-4 h-4 ml-2" />
                 </Link>
               </div>
+              <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg md:col-span-2 md:mx-auto md:max-w-md">
+                <h3 className="text-xl font-semibold mb-4">📊 Market Intelligence</h3>
+                <p className="text-gray-600 mb-4">
+                  AI-powered dashboards and analytics to understand seafood markets, pricing trends, and competitive dynamics.
+                </p>
+                <Link href="/services#intelligence" className="text-primary hover:text-primary-dark inline-flex items-center">
+                  Learn more
+                  <ArrowRightIcon className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
             </div>
           </div>
         </Container>

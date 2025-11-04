@@ -485,6 +485,56 @@ export default function Services() {
               </div>
             </div>
 
+            {/* Market Intelligence */}
+            <div id="intelligence" className="scroll-mt-20">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">Market Intelligence</h2>
+                  <p className="text-gray-600 mb-6">
+                    AI-powered dashboards and analytics to understand seafood markets, pricing trends, and competitive dynamics.
+                  </p>
+                  <ul className="space-y-4 mb-8">
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Price forecasting and trend analysis</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Market sizing and opportunity assessment</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Competitive landscape monitoring</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Custom intelligence dashboards</span>
+                    </li>
+                  </ul>
+                  <Button as={Link} href="/schedule" size="lg">
+                    Get Started
+                  </Button>
+                </div>
+                <div className="bg-gray-100 rounded-lg p-6 md:p-8">
+                  <h3 className="text-xl font-semibold mb-4">Key Benefits</h3>
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Better pricing decisions</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Market opportunity identification</span>
+                    </li>
+                    <li className="flex items-start">
+                      <ArrowRightIcon className="w-5 h-5 text-primary mt-1 mr-3" />
+                      <span>Competitive advantage</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             <div className="text-center">
               <Button as={Link} href="/schedule" size="lg">
                 Start Your AI Journey
