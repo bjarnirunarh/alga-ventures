@@ -30,28 +30,38 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-      const response = await fetch('/api/contact', {
+      // Using Web3Forms - simple, no backend needed
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY_HERE', // Get free key at web3forms.com
+          subject: `Contact Form: ${formData.subject}`,
+          from_name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message,
+        }),
       });
 
-      if (!response.ok) {
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          subject: '',
+          message: '',
+        });
+      } else {
         throw new Error('Failed to submit form');
       }
-
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        subject: '',
-        message: '',
-      });
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitStatus('error');
