@@ -39,7 +39,7 @@ export default function ContactPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY_HERE', // Get free key at web3forms.com
+          access_key: 'a954734d-4e76-4ae2-b614-1a43358eabff',
           subject: `Contact Form: ${formData.subject}`,
           from_name: formData.name,
           email: formData.email,
