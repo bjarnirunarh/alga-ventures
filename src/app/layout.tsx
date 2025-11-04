@@ -5,22 +5,26 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['system-ui', 'arial'],
+});
 
 export const metadata: Metadata = {
-  title: 'ALGA Ventures | Seafood Tech & Product Studio',
-  description: 'Specialized seafood tech consultancy and modern product studio. We help seafood companies leverage AI, automation, and data tools to reduce costs and improve operations.',
-  keywords: ['seafood tech', 'AI integration', 'product development', 'seafood automation', 'digital transformation'],
+  title: 'ALGA Ventures | AI-Powered Seafood Intelligence & Technology',
+  description: 'Bringing Iceland\'s AI innovation to US seafood markets. We provide AI-powered market intelligence, machine learning forecasting, and full AI implementation for seafood companies.',
+  keywords: ['seafood AI', 'market intelligence', 'machine learning', 'AI consulting', 'seafood analytics', 'price forecasting', 'competitive intelligence', 'seafood technology', 'Iceland AI', 'data science'],
   openGraph: {
-    title: 'ALGA Ventures | Seafood Tech & Product Studio',
-    description: 'Specialized seafood tech consultancy and modern product studio. We help seafood companies leverage AI, automation, and data tools to reduce costs and improve operations.',
+    title: 'ALGA Ventures | AI-Powered Seafood Intelligence',
+    description: 'Bringing Iceland\'s AI innovation to US seafood markets. Start with market intelligence that proves ROI, then scale to full AI transformation.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ALGA Ventures | Seafood Tech & Product Studio',
-    description: 'Specialized seafood tech consultancy and modern product studio. We help seafood companies leverage AI, automation, and data tools to reduce costs and improve operations.',
+    title: 'ALGA Ventures | AI-Powered Seafood Intelligence',
+    description: 'Iceland\'s seafood industry runs on AI. Why doesn\'t yours? We bring cutting-edge AI, ML, and data analytics to US seafood companies.',
   },
 };
 
