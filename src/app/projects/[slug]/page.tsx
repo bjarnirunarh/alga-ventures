@@ -4,9 +4,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Container from '@/components/shared/Container';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function ProjectDetailPage({ params }: any) {
-  const { slug } = params;
+interface PageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export default async function ProjectDetailPage({ params }: PageProps) {
+  const { slug } = await params;
   const project = projects.find((p) => p.slug === slug);
   if (!project) return notFound();
 

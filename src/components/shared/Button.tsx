@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ReactNode, ElementType } from 'react';
+import { ReactNode, ElementType, ComponentPropsWithoutRef } from 'react';
 
 interface ButtonProps<T extends ElementType = 'button'> {
   children: ReactNode;
@@ -7,8 +7,10 @@ interface ButtonProps<T extends ElementType = 'button'> {
   fullWidth?: boolean;
   className?: string;
   as?: T;
-  href?: string;
 }
+
+type ButtonComponentProps<T extends ElementType> = ButtonProps<T> & 
+  Omit<ComponentPropsWithoutRef<T>, keyof ButtonProps<T>>;
 
 export default function Button<T extends ElementType = 'button'>({
   children,
@@ -18,7 +20,7 @@ export default function Button<T extends ElementType = 'button'>({
   className = '',
   as,
   ...props
-}: ButtonProps<T> & Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof ButtonProps<T>>) {
+}: ButtonComponentProps<T>) {
   const baseStyles = 'inline-flex items-center justify-center rounded-xl font-semibold transition-colors';
   
   const variants = {
