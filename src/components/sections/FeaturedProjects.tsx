@@ -31,9 +31,22 @@ export default function FeaturedProjects({ limit }: FeaturedProjectsProps) {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-all duration-300 hover:-translate-y-1 group-hover:shadow-lg"
               >
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  {project.title}
-                </h3>
+                <div className="flex items-start justify-between mb-2">
+                  <h3 className="text-xl font-semibold text-primary">
+                    {project.title}
+                  </h3>
+                  {project.badge && (
+                    <span className={`px-2 py-1 text-xs font-medium rounded-full whitespace-nowrap ml-2 ${
+                      project.badge === "In Development"
+                        ? "bg-green-50 text-green-700"
+                        : project.badge === "Client Work"
+                        ? "bg-purple-50 text-purple-700"
+                        : "bg-gray-50 text-gray-700"
+                    }`}>
+                      {project.badge}
+                    </span>
+                  )}
+                </div>
                 <p className="text-neutral-700 mb-4">{project.summary}</p>
                 <p className="text-sm text-neutral-500 italic mb-4">
                   Role: {project.role}

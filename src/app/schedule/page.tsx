@@ -29,29 +29,54 @@ export default function SchedulePage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-      const response = await fetch('/api/schedule', {
+      // Format the date and time for better readability in the email
+      const formattedDate = new Date(formData.preferredDate).toLocaleDateString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      });
+
+      const formattedTime = new Date(`2000-01-01T${formData.preferredTime}`).toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      });
+
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: 'a954734d-4e76-4ae2-b614-1a43358eabff',
+          subject: `New Consultation Request from ${formData.name}`,
+          from_name: formData.name,
+          email: formData.email,
+          company: formData.company || 'Not provided',
+          preferred_date: formattedDate,
+          preferred_time: formattedTime,
+          message: formData.message,
+        }),
       });
 
-      if (!response.ok) {
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          message: '',
+          preferredDate: '',
+          preferredTime: '',
+        });
+      } else {
         throw new Error('Failed to submit form');
       }
-
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        message: '',
-        preferredDate: '',
-        preferredTime: '',
-      });
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitStatus('error');

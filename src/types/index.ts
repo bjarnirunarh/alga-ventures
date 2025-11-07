@@ -15,6 +15,7 @@ export interface Project {
   tags?: string[];
   featured?: boolean;
   displayed?: boolean;
+  badge?: string;
 }
 
 export interface TeamMember {

@@ -12,10 +12,10 @@ export default function Home() {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Transforming Seafood with Technology
+              Building Technology for Seafood
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              We help seafood companies leverage AI, automation, and data tools to reduce costs and improve operations.
+              We create software and data tools that help seafood companies operate more efficiently—from compliance apps to market intelligence platforms.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button as={Link} href="/schedule" size="lg">
@@ -58,9 +58,9 @@ export default function Home() {
                 </Link>
               </div>
               <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-4">Data Analytics</h3>
+                <h3 className="text-xl font-semibold mb-4">Data & Market Intelligence</h3>
                 <p className="text-gray-600 mb-4">
-                  Transform raw data into actionable insights to make better business decisions.
+                  Transform data into insights with analytics dashboards, market research, and ML-powered forecasting to drive strategic decisions.
                 </p>
                 <Link href="/services#analytics" className="text-primary hover:text-primary-dark inline-flex items-center">
                   Learn more
@@ -73,16 +73,6 @@ export default function Home() {
                   Develop tailored software solutions to address your specific business needs.
                 </p>
                 <Link href="/services#software" className="text-primary hover:text-primary-dark inline-flex items-center">
-                  Learn more
-                  <ArrowRightIcon className="w-4 h-4 ml-2" />
-                </Link>
-              </div>
-              <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg md:col-span-2 md:mx-auto md:max-w-md">
-                <h3 className="text-xl font-semibold mb-4">📊 Market Intelligence</h3>
-                <p className="text-gray-600 mb-4">
-                  AI-powered dashboards and analytics to understand seafood markets, pricing trends, and competitive dynamics.
-                </p>
-                <Link href="/services#intelligence" className="text-primary hover:text-primary-dark inline-flex items-center">
                   Learn more
                   <ArrowRightIcon className="w-4 h-4 ml-2" />
                 </Link>
