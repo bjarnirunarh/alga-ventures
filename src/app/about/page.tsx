@@ -22,7 +22,7 @@ export default function AboutPage() {
         </p>
 
         <p className="text-neutral-700 mb-4">
-          Bjarni's wife, Solveig Hakonardottir, leads digital innovation for Reykjavik's welfare services and occasionally contributes her expertise in design, team leadership, and education to ALGA projects.
+          Bjarni&apos;s wife, Solveig Hakonardottir, leads digital innovation for Reykjavik&apos;s welfare services and occasionally contributes her expertise in design, team leadership, and education to ALGA projects.
         </p>
       </MotionDiv>
 
@@ -66,7 +66,7 @@ export default function AboutPage() {
           <h3 className="text-xl font-semibold text-primary mb-2">Solveig Hakonardottir</h3>
           <p className="text-sm text-neutral-600 mb-3">Contributing Partner</p>
           <p className="text-neutral-700 max-w-2xl mx-auto">
-            Team lead for Reykjavik's digital welfare innovation team. Solveig occasionally contributes her expertise in design, team leadership, and education to ALGA projects.
+            Team lead for Reykjavik&apos;s digital welfare innovation team. Solveig occasionally contributes her expertise in design, team leadership, and education to ALGA projects.
           </p>
         </MotionDiv>
       </div>
@@ -85,7 +85,7 @@ export default function AboutPage() {
           href="/contact"
           className="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/80 transition font-semibold"
         >
-          Let's Connect
+          Let&apos;s Connect
         </a>
       </MotionDiv>
     </main>
