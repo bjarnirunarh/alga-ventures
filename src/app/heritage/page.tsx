@@ -122,7 +122,7 @@ export default function HeritagePage() {
                 The Alga Heritage
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-                From Siberian driftwood to digital innovation — four generations of Icelandic resilience
+                Four generations of Icelandic innovation—from driftwood to digital
               </p>
             </MotionDiv>
           </div>
@@ -141,18 +141,25 @@ export default function HeritagePage() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true, margin: "-50px" }}
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
-                <div className="px-4 md:px-0">
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
-                    The Name
-                  </h2>
-                  <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                    Alga — the Latin singular for algae, or &apos;þari&apos; in Icelandic — is more than a company name. It&apos;s a family legacy that spans nearly a century. The nickname &apos;Þari&apos; was earned by my great-grandfather, Gvendur, during seven extraordinary years in one of Iceland&apos;s most remote fjords, where he transformed adversity into opportunity through ingenuity and determination.
-                  </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-start">
+                <div className="px-4 md:px-0 space-y-6 sm:space-y-8">
+                  <div>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
+                      The Name
+                    </h2>
+                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+                      Alga—the Latin singular for algae, or &apos;þari&apos; in Icelandic—is more than a company name. It&apos;s a family legacy spanning nearly a century. My great-grandfather, Gvendur, earned the nickname &apos;Þari&apos; during seven extraordinary years in one of Iceland&apos;s most remote fjords, where he turned adversity into opportunity through ingenuity and determination.
+                    </p>
+                  </div>
+                  <HeritageImage
+                    src="/heritage/tharalaturfjordur_location.png"
+                    alt="Map showing Þaraláturfjörður location in Iceland"
+                    caption="Þaraláturfjörður—one of Iceland's most remote fjords in the Westfjords"
+                  />
                 </div>
                 <div className="px-4 md:px-0">
                   <HeritageImage
-                    src="/heritage/gvendur_þari_1972.jpg"
+                    src="/heritage/gvendur_þari_1972.png"
                     alt="Gvendur Þari 1972"
                     caption="Gvendur 'Þari' in June 1972"
                     priority={true}
@@ -222,7 +229,7 @@ export default function HeritagePage() {
                     <TimelineItem
                       year="1939-46"
                       title="Self-Sufficiency"
-                      description='Family thrives on complete "sjálfsþurftarbúskapur"'
+                      description="Family thrives through complete self-sufficiency farming with around 100 sheep"
                     />
                     <TimelineItem
                       year="1946"
@@ -235,16 +242,16 @@ export default function HeritagePage() {
                 {/* Images Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-6 sm:mt-8">
                   <HeritageImage
-                    src="/heritage/tryggvi_þari_with_pole_logs.jpg"
+                    src="/heritage/tryggvi_þari_with_pole_logs.png"
                     alt="Tryggvi Þari with pole logs"
-                    caption="My grandfather Tryggvi 'Þari' aboard his vessel"
+                    caption="My grandfather Tryggvi 'Þari' aboard his vessel with driftwood fence poles"
                     width={400}
                     height={300}
                   />
                   <HeritageImage
-                    src="/heritage/the_farm_in_þaralátursfjörður.jpeg"
+                    src="/heritage/the_farm_in_þaralátursfjörður.png"
                     alt="The farm in Þaraláturfjörður"
-                    caption="Þaraláturfjörður, 1940s"
+                    caption="Þaraláturfjörður, 1950—after the family returned to Ísafjörður"
                     width={400}
                     height={300}
                   />
@@ -265,7 +272,7 @@ export default function HeritagePage() {
                     Generations at Sea
                   </h2>
                   <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                    The entrepreneurial spirit and connection to the sea passed through generations. My grandfather, Tryggvi &apos;Þari,&apos; born in Þaraláturfjörður during those seven years, inherited both the nickname and the boat. My father, Heimir &apos;Þari,&apos; continued the tradition. And I, Bjarni, went to sea with both of them, learning the industry from the deck up—from fishing boats in Iceland to markets in America.
+                    The entrepreneurial spirit and connection to the sea passed through generations. My grandfather, Tryggvi &apos;Þari,&apos; was born in Þaraláturfjörður during those seven years and inherited both the nickname and the boat. My father, Heimir &apos;Þari,&apos; continued the tradition. I went to sea with both of them, learning the industry from the deck up—from fishing boats in Iceland to seafood markets in America.
                   </p>
                 </div>
                 <div className="px-4 md:px-0">
